@@ -1,0 +1,1 @@
+/*Magnus Carlsen,Caruana Fabiano, Nakamura Hikaru, Nepomniachtchi Ian, Arjun Erigaisi, Nodirbek Abdusattorov, Gukesh Dommaraju, Wesley So, Praggnanandhaa Rameshbabu, Wei Yi*/
