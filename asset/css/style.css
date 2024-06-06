@@ -5,14 +5,129 @@ body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     text-align: center;
-    color: #445361;
+    color: hsl(59, 21%, 40%);
 }
-
+/*headings*/
 #chess-quiz {
     text-align: center;
     font-size: 2.5rem;
 }
 #logo {
-    height: 40px;
+    height: 100px;
+    max-width: 100px;
     padding-right: 5px;
+}
+/*main*/
+.control{
+    background-color: #acd4ee;
+    background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 400px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+.pieces {
+    width: 50%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 50px 0;
+}
+#pic{
+        width: 100px;
+        height: 80px;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: auto;
+        padding-right: 40px;
+       
+}
+
+
+.button{
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: "Raleway", sans-serif;
+    text-justify: auto;
+    text-transform: lowercase;
+    letter-spacing: 1.2px;
+    color: rgb(40, 55, 156);
+    padding: 0;
+    margin-top: auto;
+    background-color: burlywood;
+
+}
+.button:active,
+.button:hover {
+    background-color: darkblue;
+    color: burlywood;;
+}
+
+ .submit{
+    margin-bottom: 10px;
+    background-color: burlywood;
+    border: 1px transparent;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+
+}
+/*.button:active,*/
+.submit:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.score-tally {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+.scores {
+    display: inline-block;
+    padding: 25px;
+    height: 10px;
+    
+}
+
+#correct {
+    color: green;
+    font-weight: bold;
+    height: 20px;
+    width: 20px;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+    padding-left: 0;
+}  
+   
+.social-networks{
+    footer {
+        height: 150px;
+        display: inline-block;
+    }
+    
+    .social-networks {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    
+    .social-networks i {
+        font-size: 160%;
+        margin: 1%;
+        padding: 5%;
+        color: #3a3a3a;
+
+    }
 }

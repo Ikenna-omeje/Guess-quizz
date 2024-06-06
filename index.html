@@ -11,26 +11,27 @@
 
 <body>
     <div id="Chess-quiz">
-        <h1><img id="logo" src="asset/image/icons8-knight-100.png" alt="logo1"></h1>
+        <img id="logo" src="asset/image/icons8-knight-100.png" alt="logo1">
         <h3 class="choice">Choose The Right Answer</h3>
-    <div>
-    
+        <div>
 
-    <div class="control">
-        <label for="pic">Image</label>
-        <input id="pic" type="image">
-        <div class="pieces">
-           <ul>
-               <!-- <li>king <span id="icp"><img src="asset/image/icons8-king-48.png" alt="king"></span></li>
+
+            <div class="control">
+                <label for="pic">Image</label>
+                <input id="pic" type="image">
+
+                <div class="pieces">
+                    <ul>
+                        <!-- <li>king <span id="icp"><img src="asset/image/icons8-king-48.png" alt="king"></span></li>
                 <li>Queen<span id="icp"></span><img src="asset/image/icons8-queen-94.png" alt="Queen"></span></li>
                 <li>knight<span id="icp"><img src="asset/image/icons8-knight-48 (1).png" alt="knight"></span></li>
                 <li>Bishop<span id="icp"><img src="asset/image/icons8-bishop-94.png" alt="bishop"></span></li>
                 <li>Rook<span id="icp"><img src="asset/image/icons8-rook-48.png" alt="rook"></span></li>
                 <li>Pawn<span id="icp"><img src="asset/image/icons8-pawn-94.png" alt="pawn"></span></li>
                 <li>Timer<span id="icp"><img src="asset/image/icons8-chess-clock-48.png" alt="timer"></span></li>-->
-            </ul>
-            <ul>
-                <!--<li>Magnus Carlsen</li>
+                    </ul>
+                    <ul>
+                        <!--<li>Magnus Carlsen</li>
                 <li>Caruana Fabiano</li>
                 <li>Nakamura Hikaru</li>
                 <li>Nepomniachtchi Ian,</li>
@@ -40,29 +41,62 @@
                 <li> Wesley So</li> 
                 <li>Praggnanandhaa Rameshbabu</li> 
                 <li>Wei Yi</li> -->
-             </ul>
+                    </ul>
 
-        </div>
-        <button class="button">Generate</button>
+                    <button class="button">Generate</button>
 
-        <div>
-            <p id="input-answer">Enter Answer</p>
-            <input id="answer-box" type="text">
-        </div>
+                </div>
 
-        <button class="submit">submit Answer</button>
 
-    </div>
+                <div class="input-box">
+                    <input id="answer-box" type="text">
+                    <p id="input-answer">Enter Answer</p>
+                </div>
+            
 
-    <div Score-Tally>
-        <ul>
-            <li class="scores">Right Answer<span id="correct">0</span></li>
-            <br>
-            <li class="scores">Wrong Answer<span id="incorrect">0</span></li>
-        </ul>
+                <button class="submit">Submit</button>
+            </div>
 
-    </div>
-    <script src="asset/js/script.js"></script>
+            
+
+            <div>
+                <ul class="score-tally">
+                    <li class="scores">Right Answer
+                        <hr><span id="correct">0</span></li>
+                  
+                    <li class="scores">Wrong Answer
+                        <hr><span id="incorrect">0</span></li>
+                </ul>
+
+            </div>
+        
+
+        <footer>
+            <ul class="social-networks">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"
+                        aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </footer>
+    
+        <!-- font awesome script  -->
+        <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    </body>
+    
+            <script src="asset/js/script.js"></script>
 </body>
 
 </html>
