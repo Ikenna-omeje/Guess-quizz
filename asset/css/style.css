@@ -16,8 +16,16 @@ body {
     height: 100px;
     max-width: 100px;
     padding-right: 5px;
+    padding: auto;
+    margin-top: 0px;
+}
+.choice {
+    margin-top: 10px;
+   margin-bottom: 20px;
+    padding: auto;
 }
 /*main*/
+
 .control{
     background-color: #acd4ee;
     background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;
@@ -37,8 +45,8 @@ body {
     padding: 50px 0;
 }
 #pic{
-        width: 100px;
-        height: 80px;
+        width: 120px;
+        height: 100px;
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.2px;
@@ -50,8 +58,24 @@ body {
        
 }
 
+#image-container img {
+    max-width: 100px;
+    height: 70px;
+    margin: 10px;
+}
+.input-box {
+    margin-top: 50px;
+    padding-top: 100px;
+    display: flex;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    padding: 0 15px;
+}
+#answer-box{
+    margin-top: 2em;
 
-.button{
+}
+#button{
     width: 80px;
     height: 30px;
     border-radius: 20px;
@@ -65,8 +89,8 @@ body {
     background-color: burlywood;
 
 }
-.button:active,
-.button:hover {
+#button:active,
+#button:hover {
     background-color: darkblue;
     color: burlywood;;
 }
@@ -113,21 +137,21 @@ body {
    
 .social-networks{
     footer {
-        height: 150px;
+        height: 100px;
         display: inline-block;
     }
     
     .social-networks {
         text-align: left;
-        display: inline-block;
     }
     
     
     .social-networks i {
         font-size: 160%;
-        margin: 1%;
+        margin: 10px;
         padding: 5%;
         color: #3a3a3a;
+        display: inline-block;
 
     }
 }
