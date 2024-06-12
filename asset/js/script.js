@@ -9,18 +9,83 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add a click event listener to the button
     imageElement.addEventListener('click', handleClick);
 });
-// Function to generate a random index
+
+
+// Function to handle the image click event
+let randomIndex;
+    // Array of image paths
+    let imagePaths = [
+    {      
+        image: "asset/image/icons8-king-94.png", 
+        answer: "King"
+    },
+    {
+        image: "asset/image/icons8-queen-94.png", 
+        answer: "Queen"
+    },
+    
+    {
+       image: "asset/image/icons8-bishop-94.png",
+        answer: "Bishop"
+       },
+    {
+        image:"asset/image/icons8-chess-board-64.png",
+        answer: "chess-board"
+    },
+    {
+        image:"asset/image/icons8-rook-94.png",
+        answer: "rook"
+    },
+    {
+        image:"asset/image/icons8-pawn-94.png",
+        answer: "chess-pawn"
+    },
+    {
+        image:"asset/image/icons8-chess-clock-96.png",
+        answer: "chess-clock"
+    },
+    {
+        image:"asset/image/icons8-ace-of-hearts-94.png",
+        answer:"ace"   
+    },
+    {
+        image:"asset/image/icons8-dice-94.png",
+        answer:"dice"
+    },
+    {
+        image:"asset/image/icons8-joker-96.png",
+        answer:"joker"
+    },
+    {
+        image:"asset/image/icons8-queen-of-diamonds-64.png",
+        answer:"queen"
+    },
+    {
+        image:"asset/image/icons8-king-of-diamonds-94.png",
+        answer:"king"
+    
+    },
+    {
+        image:"asset/image/icons8-rubik's-cube-94.png",
+        answer:"rubik's cube"
+        
+    },
+    {
+        image:"asset/image/icons8-knight-94.png",
+        answer:"knight"    
+    },
+];       
+
+        // Function to generate a random index
 function getRandomIndex(max) {
     return Math.floor(Math.random() * max);
 }
 
-// Function to handle the image click event
 function handleClick() {
-    // Array of image paths
     let imagePaths = [
-                
-        "asset/image/icons8-king-94.png",
-        "asset/image/icons8-queen-94.png",
+            
+        "asset/image/icons8-king-94.png", 
+        "asset/image/icons8-queen-94.png", 
         "asset/image/icons8-bishop-94.png",
         "asset/image/icons8-chess-board-64.png",
         "asset/image/icons8-rook-94.png",
@@ -33,15 +98,7 @@ function handleClick() {
         "asset/image/icons8-king-of-diamonds-94.png",
         "asset/image/icons8-rubik's-cube-94.png",
         "asset/image/icons8-knight-94.png",
-        
-        ];
-
-        // Function to generate a random index
-function getRandomIndex(max) {
-    return Math.floor(Math.random() * max);
-    console.log(imagePaths)
-}
-
+    ];
     // Generate a random index and select an image path
     let randomIndex = getRandomIndex(imagePaths.length);
     let randomImagePath = imagePaths[randomIndex];
@@ -59,39 +116,25 @@ function getRandomIndex(max) {
 }
 
 
-
-
-
-
-
-
-    
-
-   
-    
-
-   
-
-
-
-    
-
-
-
-
-
-
-
 function runGame() {
-
-
 
 }
 
 function checkAnswer() {
-    if 
+        // Get answer from input element
+        const answer = document.getElementById('answer-box').value
+        // compare if answer is correct
+        const choosenImage = imagePaths[randomIndex]
+        if (choosenImage.answer == answer) {
+            // Answer is correct
+        } else {
+            // Answer is incorrect
+        }
+        // Update score
+    
+    }
+    
 
-}
 
 function calCurrectAnswer() {
 
