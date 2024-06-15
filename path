@@ -1,0 +1,30 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("answer-box") === "submit") {
+                alert("You clicked Submit!");
+            } else {
+                let gameType = this.getAttribute("image-Element");
+                runGame(gameType);
+            }
+        });
+    }
+
+    runGame("addition");
+
+});
+
+button = document.getElementById("Button");
+const submitBtn = document.getElementsById('btn');
+button.disabled = true;
+
+//add event listener
+clickBtn.addEventListener('click', function(event) {
+    button.disabled = !button.disabled;
+});
+
+button.addEventListener('click', function(event) {
+    alert('Enabled!');
+});

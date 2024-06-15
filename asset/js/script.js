@@ -1,91 +1,91 @@
-/*Magnus Carlsen,Caruana Fabiano, Nakamura Hikaru, Nepomniachtchi Ian, Arjun Erigaisi, Nodirbek Abdusattorov, Gukesh Dommaraju, Wesley So, Praggnanandhaa Rameshbabu, Wei Yi*/
 /* activate buttons and add event listeners*/
 
+randomIndex=[]
 // Wait for the DOM to fully load before adding event listeners
 document.addEventListener('DOMContentLoaded', () => {
     // Select the image element by its ID
-    let imageElement = document.getElementById('button');
-
+    const imageElement = document.getElementById('button');
     // Add a click event listener to the button
     imageElement.addEventListener('click', handleClick);
+
 });
 
 
+
 // Function to handle the image click event
-let randomIndex;
-    // Array of image paths
-    let imagePaths = [
-    {      
-        image: "asset/image/icons8-king-94.png", 
+
+// Array of image paths
+let imagePaths = [{
+        image: "asset/image/icons8-king-94.png",
         answer: "King"
     },
     {
-        image: "asset/image/icons8-queen-94.png", 
+        image: "asset/image/icons8-queen-94.png",
         answer: "Queen"
     },
-    
+
     {
-       image: "asset/image/icons8-bishop-94.png",
+        image: "asset/image/icons8-bishop-94.png",
         answer: "Bishop"
-       },
-    {
-        image:"asset/image/icons8-chess-board-64.png",
-        answer: "chess-board"
     },
     {
-        image:"asset/image/icons8-rook-94.png",
-        answer: "rook"
+        image: "asset/image/icons8-chess-board-64.png",
+        answer: "Chess-board"
     },
     {
-        image:"asset/image/icons8-pawn-94.png",
-        answer: "chess-pawn"
+        image: "asset/image/icons8-rook-94.png",
+        answer: "Rook"
     },
     {
-        image:"asset/image/icons8-chess-clock-96.png",
+        image: "asset/image/icons8-pawn-94.png",
+        answer: "Pawn"
+    },
+    {
+        image: "asset/image/icons8-chess-clock-96.png",
         answer: "chess-clock"
     },
     {
-        image:"asset/image/icons8-ace-of-hearts-94.png",
-        answer:"ace"   
+        image: "asset/image/icons8-ace-of-hearts-94.png",
+        answer: "Ace"
     },
     {
-        image:"asset/image/icons8-dice-94.png",
-        answer:"dice"
+        image: "asset/image/icons8-dice-94.png",
+        answer: "Dice"
     },
     {
-        image:"asset/image/icons8-joker-96.png",
-        answer:"joker"
+        image: "asset/image/icons8-joker-96.png",
+        answer: "Joker"
     },
     {
-        image:"asset/image/icons8-queen-of-diamonds-64.png",
-        answer:"queen"
+        image: "asset/image/icons8-queen-of-diamonds-64.png",
+        answer: "Queen"
     },
     {
-        image:"asset/image/icons8-king-of-diamonds-94.png",
-        answer:"king"
-    
-    },
-    {
-        image:"asset/image/icons8-rubik's-cube-94.png",
-        answer:"rubik's cube"
-        
-    },
-    {
-        image:"asset/image/icons8-knight-94.png",
-        answer:"knight"    
-    },
-];       
+        image: "asset/image/icons8-king-of-diamonds-94.png",
+        answer: "King"
 
-        // Function to generate a random index
+    },
+    {
+        image: "asset/image/icons8-rubik's-cube-94.png",
+        answer: "Rubik's cube"
+
+    },
+    {
+        image: "asset/image/icons8-knight-94.png",
+        answer: "Knight"
+    },
+];
+
+// Function to generate a random index
 function getRandomIndex(max) {
     return Math.floor(Math.random() * max);
 }
 
 function handleClick() {
     let imagePaths = [
-            
-        "asset/image/icons8-king-94.png", 
-        "asset/image/icons8-queen-94.png", 
+
+        "asset/image/icons8-king-94.png",
+        "asset/image/icons8-queen-94.png",
         "asset/image/icons8-bishop-94.png",
         "asset/image/icons8-chess-board-64.png",
         "asset/image/icons8-rook-94.png",
@@ -99,8 +99,10 @@ function handleClick() {
         "asset/image/icons8-rubik's-cube-94.png",
         "asset/image/icons8-knight-94.png",
     ];
+
+
     // Generate a random index and select an image path
-    let randomIndex = getRandomIndex(imagePaths.length);
+    randomIndex = getRandomIndex(imagePaths.length);
     let randomImagePath = imagePaths[randomIndex];
 
     // Create an img element
@@ -113,27 +115,37 @@ function handleClick() {
     let imageContainer = document.getElementById('imageContainer');
     imageContainer.innerHTML = ''; // Clear previous image
     imageContainer.appendChild(imgElement);
-}
 
+}
 
 function runGame() {
 
 }
 
-function checkAnswer() {
-        // Get answer from input element
-        const answer = document.getElementById('answer-box').value
-        // compare if answer is correct
-        const choosenImage = imagePaths[randomIndex]
-        if (choosenImage.answer == answer) {
-            // Answer is correct
-        } else {
-            // Answer is incorrect
-        }
-        // Update score
-    
+function checkAnswer(event) {
+    event.preventDefault()
+console.log("The submit BTN is working!!")
+    // Get answer from input element
+    const answer = document.getElementById('answer-box').value
+
+    // compare if answer is correct
+    const choosenImage = imagePaths[randomIndex]
+    if (choosenImage.answer == answer) {
+        alert("Right Answer")
+        // Answer is correct
+    } else {
+        alert("Wrong Answer")
+        // Answer is incorrect
     }
-    
+    // Update score
+
+}
+
+const submitBtn = document.getElementById('btn');
+// Add a click event listener to the button
+submitBtn.addEventListener('click', checkAnswer);
+
+
 
 
 function calCurrectAnswer() {
