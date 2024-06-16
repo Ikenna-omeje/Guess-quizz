@@ -131,10 +131,12 @@ console.log("The submit BTN is working!!")
     // compare if answer is correct
     const choosenImage = imagePaths[randomIndex]
     if (choosenImage.answer == answer) {
-        alert("Right Answer")
+        alert("Right Answer");
+        incrementRightAnswer();
         // Answer is correct
     } else {
-        alert("Wrong Answer")
+        alert("Wrong Answer correct answer is ${answer}")
+        incrementWrongAnswer();
         // Answer is incorrect
     }
     // Update score
@@ -152,10 +154,14 @@ function calCurrectAnswer() {
 
 }
 
-function incrementScore() {
+function incrementRightAnswer() {
+    let preScore=document.getElementById('correct').innerText;
+    document.getElementById('correct').innerText = ++preScore;
 
 }
 
 function incrementWrongAnswer() {
+    let preScore=document.getElementById('incorrect').innerText;
+    document.getElementById('incorrect').innerText = ++preScore;
 
 }
