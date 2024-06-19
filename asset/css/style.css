@@ -197,7 +197,7 @@ body {
 }
 
 #networks {
-    flex-direction: column;
+    flex-direction: row-reverse;
 
 }
 @media (max-width: 414px) {
