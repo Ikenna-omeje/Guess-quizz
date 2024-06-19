@@ -1,3 +1,4 @@
+// Wait for the DOM to fully load before adding event listeners
 document.addEventListener('DOMContentLoaded', () => {
     const imageElement = document.getElementById('button');
     const submitBtn = document.getElementById('btn');
@@ -18,10 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 let imageCount = 0;
-const maxImages = 7;
+const maxImages = 10;
 let randomIndex = 0;
 let imageInterval;
-
+// Function to handle the image click event
+    // Array of image paths
 const imagePaths = [
     { image: "asset/image/icons8-king-94.png", answer: "King" },
     { image: "asset/image/icons8-queen-94.png", answer: "Queen" },
@@ -38,22 +40,22 @@ const imagePaths = [
     { image: "asset/image/icons8-rubik's-cube-94.png", answer: "Rubik's cube" },
     { image: "asset/image/icons8-knight-94.png", answer: "Knight" },
 ];
-
+//function to generate a random index
 function getRandomIndex(max) {
     return Math.floor(Math.random() * max);
 }
 
 function handleClick() {
     if (imageCount >= maxImages) return;
-
+ // Generate a random index and select an image path
     randomIndex = getRandomIndex(imagePaths.length);
     let randomImagePath = imagePaths[randomIndex];
-
+// Create an img element
     let imgElement = document.createElement('img');
     imgElement.src = randomImagePath.image;
     imgElement.alt = 'Random Image';
     imgElement.style.maxWidth = '100%';
-
+ // Clear the previous image and append the new one
     let imageContainer = document.getElementById('imageContainer');
     imageContainer.innerHTML = '';
     imageContainer.appendChild(imgElement);
@@ -64,23 +66,30 @@ function handleClick() {
         clearInterval(imageInterval);
     }
 }
-
+//function to startgame
 function checkAnswer() {
     const answer = document.getElementById('answer-box').value;
     const choosenImage = imagePaths[randomIndex];
 
     if (choosenImage.answer.toLowerCase() === answer.toLowerCase()) {
-        alert("Right Answer");
+        //answer correct
+       /* alert("Right Answer");*/
+       document.getElementById('answer-box').style.backgroundColor = 'green';
         incrementRightAnswer();
     } else {
         alert(`Wrong Answer! The correct answer is ${choosenImage.answer}!`);
+        document.getElementById('answer-box').style.backgroundColor = 'red';
         incrementWrongAnswer();
+        //answer incorrect
     }
+    // Clear the answer box
+    document.getElementById('answer-box').value = '';
 }
 
 function resetGame() {
     document.getElementById('correct').innerText = '0';
     document.getElementById('incorrect').innerText = '0';
+    document.getElementById('answer-box').style.backgroundColor = ''; // Reset background color
     imageCount = 0;
     handleClick();
 
