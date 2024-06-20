@@ -5,7 +5,7 @@ body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     text-align: center;
-    color: hsl(59, 21%, 40%);
+    color: black;
     box-sizing: content-box;
 
 }
@@ -23,14 +23,14 @@ body {
 }
 .choice {
     margin-top: 10px;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
     padding: auto;
 }
 /*main*/
 
 .control{
-    background-color: #acd4ee;
-    background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;
+    background-color: rgb(172, 172, 200);
+   /* background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;*/
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
@@ -77,7 +77,7 @@ body {
     margin-top: 0em;
 
 }
-#button  {
+#button, #btn, #bttn   {
     width: 80px;
     height: 30px;
     border-radius: 20px;
@@ -91,7 +91,7 @@ body {
     background-color: burlywood;
 
 }
-#btn {
+/*#btn {
     width: 80px;
     height: 30px;
     border-radius: 20px;
@@ -117,7 +117,7 @@ body {
     padding: 0;
     margin-top: auto;
     background-color: burlywood;
-}
+}*/
 
 #button:active,
 #button:hover {
@@ -154,6 +154,7 @@ body {
     margin: 5px auto;
     width: 60%;
     font-size: 1.2rem;
+    flex-direction: column-reverse;
 }
 .scores {
     display: block;
@@ -174,8 +175,11 @@ body {
     font-weight: bold;
     padding-left: 0;
 }  
+#rules{
+    text-align: center
+}
    
-.social-networks{
+/*.social-networks{
     footer {
         height: 100px;
         display: inline-block;
@@ -199,7 +203,7 @@ body {
 #networks {
     flex-direction: row-reverse;
 
-}
+}*/
 @media (max-width: 414px) {
     .controls-area {
         width: 100%;
@@ -213,9 +217,6 @@ body {
         height: 50px;
         font-size: 1.5rem;
     }
-
-   
-    
 
     .question-area {
         padding: 10% 0;
