@@ -6,28 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="asset/css/style.css">
-    <title>Document</title>
+    <title>GUESS-QUIZ</title>
 </head>
-
 <body>
-    <div id="Guess-quiz">
+    <div id="guessquiz">
         <img id="logo" src="asset/image/icons8-knight-100.png" alt="logo1">
-        <h3 class="choice">Choose The Right Answer</h3>
+        <h3 class="choice">Guess Quizz</h3>
+        <p>Choose The Right Answer</p>
     </div>
-
-
-
     <div class="control">
-        <center>
-            <h4>Image Generator</h2>
-        </center>
-        <!--<label for="pic">Image</label>-->
-        <!--<input id="pic" img src="asset/image/icons8-bishop-94.png" alt="bishop" type="image">-->
-        
+        <h4>Image Generator</h4>
         <button id="button" onclick="handleClick">Start/gen</button>
-        <br> <br> 
+        <br> <br>
         <div class="image-Container" id="imageContainer"></div>
-
         <div class="input-box">
             <input id="answer-box" type="text">
             <p id="input-answer">Enter Answer</p>
@@ -36,40 +27,47 @@
         </div>
 
     </div>
-    <div class="score-tally"> 
+    <div class="score-tally">
         <p class="scores">Right Answer<br><span id="correct">0</span></P>
-            <hr>
+        <hr>
         <P class="scores">Wrong Answer<br><span id="incorrect">0</span></P>
-            <hr>
+        <hr>
     </div>
     <div class="rules">
         <h3>Rules</h3>
-        <p>Single</p>
+        <hr>
+        <h4>Single</h4>
         <ol>
-            <li>Click the start button to start</li>
+            <li>Click the start/gen button to start, click again to generate images</li>
             <li>Guess the write image</li>
             <li>Check the score</li>
         </ol>
-        <p>Rapid</p>
+        <h4> Rapid</h4>
         <ol>
             <li>Click the random/reset button</li>
-            <li>pick and type in the right image within 8sec</li> 
+            <li>pick and type in the right image within 8sec</li>
             <li>Check the score</li>
         </ol>
 
     </div>
-    
+    <footer>
+        <div class="contact">
+            <H3>Contact us:</H3>
+            <p>Email: quess-quiz@email.com</p>
+            <p>Duvbergsvagen 2, Varbygard Stockholm Sweden</p>
+        </div>
+    </footer>
 
-    
 
 
-   
+
+
+
 
     <!-- font awesome script  -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
-</body>
 
-<script src="asset/js/script.js"></script>
+    <script src="asset/js/script.js"></script>
 </body>
 
 </html>

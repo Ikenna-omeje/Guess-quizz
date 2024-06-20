@@ -1,10 +1,8 @@
 # Guess-pieces
-Guess-piece is a game site that combines the knowledge of different items and the spontaniety of your typing speed. it is designed to keep the players alert and responsive.
+Guess-piece is a game site that combines the knowledge of different items and the spontaniety of your typing speed. it is designed to keep the players alert, responsive and educative.
 
 
-For example; Love Running is a site that hopes to help keep people motivated to meet up for runs on a regular basis in Dublin, Ireland. The site will be targeted toward runners who are looking for a way to socialise and keep themselves fit. Love Running will be useful for runners to see exactly when and where they should be to join the running club. 
-
-![Responsice Mockup](https://github.com/lucyrush/readme-template/blob/master/media/love_running_mockup.png)
+![Responsice Mockup](../asset/image/Screenshot 2024-06-20 at 19.22.38.png)
 
 ## Features 
 
@@ -12,24 +10,41 @@ In this section, you should go over the different parts of your project, and des
 
 ### Existing Features
 
-- __Navigation Bar__
+- __Header__
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+  - Features on top of the page introducing the game-name and an insight into the type of game hosted.
+  - This section introduces a logo (a chess-knight piece) representing the main object in the game process.
+  - An instruction menu directing/intruducing the game.
 
 ![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
 
-- __The landing page image__
+## Game options
 
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
+  - The game has room for two types of game (single form and the rapid form)
+
+__single form__
+
+  - The user starts the game by clicking the start/gen(1) button.
+  - Javascript generates a random image by the click of the start/gen (2).
+  - The answer box is available for a text-input guessing the image shown.
+ 
+ __Rapid form__
+
+  - The second game would be initiated by clicking the randon/reset button.
+  - On the click of the button images would be randomly generated every 8 sec.
+  - The answer box is available for a text-input guessing the image shown.
+
+- __Game execution__
+- when an input-text that matches the image shown is lodged, the answer box turns green otherwise it turns red.
+- if the answer is wrong an alert pops up with the right answer.
+- the submit button tabulates the answer into into the right and wrong buttons.
+
 
 ![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
 
-- __Club Ethos Section__
+- __Game Rules Section__
 
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
+  - This section explans the rules of the game, describes the fuctions of the buttons.
 
 ![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
 
@@ -42,9 +57,7 @@ In this section, you should go over the different parts of your project, and des
 
 - __The Footer__ 
 
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
-
+  - The footer section includes links to the relevant contact details. 
 ![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
 
 - __Gallery__
@@ -66,9 +79,36 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ### Features Left to Implement
 
-- Another feature idea
+- Other features to be considered in the future, includes adding levels and difficulties to the game by gradually decreasing the time frame and breaking them into levels.
+- creating different topic arrays e.g countries, mammals, food recipies etc allowing a diverse spectrum for players to choose from.
 
 ## Testing 
+- I can confirm the can be played in different browers: Chrome Firefox and Safari.
+- I can confirm that the games result are always correct.
+- i can comfirm that the header, instruction, rules, score and footer are easily comprehensible.
+- i confirm that the fonts and  colors  and provides a good contrast to the background and is easily readable and visually pleasing.
+
+
+
+
+
+
+
+
+
+
+## Bugs
+- Testing using the devtools i had issues with my accessibilty score, it turns out that my font color did not provide an adequate contrast with my background-image.
+
+
+
+
+
+
+
+
+
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -82,9 +122,8 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
-- CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - No errors were returned when passing through the official 
+  - No errors were found when passing through the official 
 
 ### Unfixed Bugs
 
@@ -103,7 +142,8 @@ The live link can be found here - https://code-institute-org.github.io/love-runn
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+some of the idea and structure of the quess-quizz game site was inspired from the love-maths game. other inputs and tutoring/advice was given by some of the best tutors In code institude roo, osim etc.
+oyher ideas where from (Codemagnet Your Magnetic Resource)this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
 You can break the credits section up into Content and Media, depending on what you have included in your project. 
 

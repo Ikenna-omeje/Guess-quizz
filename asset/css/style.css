@@ -10,7 +10,7 @@ body {
 
 }
 /*headings*/
-#chess-quiz {
+#guess-quiz {
     text-align: center;
     font-size: 2.5rem;
 }
@@ -18,13 +18,11 @@ body {
     height: 100px;
     max-width: 100px;
     padding-right: 5px;
-    padding: auto;
     margin-top: 0px;
 }
 .choice {
     margin-top: 10px;
     margin-bottom: 20px;
-    padding: auto;
 }
 /*main*/
 
@@ -91,33 +89,6 @@ body {
     background-color: burlywood;
 
 }
-/*#btn {
-    width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    font-family: "Raleway", sans-serif;
-    text-justify: auto;
-    text-transform: lowercase;
-    letter-spacing: 1.2px;
-    color: rgb(40, 55, 156);
-    padding: 0;
-    margin-top: auto;
-    background-color: burlywood;
-}
-
-#bttn {
-    width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    font-family: "Raleway", sans-serif;
-    text-justify: auto;
-    text-transform: lowercase;
-    letter-spacing: 1.2px;
-    color: rgb(40, 55, 156);
-    padding: 0;
-    margin-top: auto;
-    background-color: burlywood;
-}*/
 
 #button:active,
 #button:hover {
@@ -175,35 +146,26 @@ body {
     font-weight: bold;
     padding-left: 0;
 }  
-#rules{
+.rules{
     text-align: center
 }
-   
-/*.social-networks{
-    footer {
-        height: 100px;
-        display: inline-block;
-    }
-    
-    .social-networks {
-        text-align: left;
-    }
     
     
-    .social-networks i {
-        font-size: 160%;
-        margin: 10px;
+    .contact {
+        font-size: 70%;
+        margin-top: 70px;
+        margin-bottom: 0;
         padding: 5%;
         color: #3a3a3a;
+        box-sizing: border-box;
+        align-content: space-around;
+        background-color: rgb(172, 172, 200);
         display: inline-block;
+        width: 100%;
+        
 
     }
-}
-
-#networks {
-    flex-direction: row-reverse;
-
-}*/
+    
 @media (max-width: 414px) {
     .controls-area {
         width: 100%;
