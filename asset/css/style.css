@@ -75,7 +75,27 @@ body {
     margin-top: 0em;
 
 }
-#button, #btn, #bttn   {
+
+#countdown { /*width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: "Raleway", sans-serif;
+    text-justify: auto;
+    text-transform: lowercase;
+    letter-spacing: 1.2px;
+    color: rgb(40, 55, 156);
+    padding: 0;
+    margin-top: auto;
+    background-color: burlywood;*/
+
+    font-size: 24px;
+    color: #ff0000;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#button, #btn, #bttn, #btttn   {
     width: 80px;
     height: 30px;
     border-radius: 20px;
