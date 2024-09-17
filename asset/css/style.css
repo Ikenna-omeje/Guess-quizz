@@ -4,31 +4,32 @@
 body {
     background-color: white;
     font-family: "Raleway", sans-serif;
-    text-align: center;
+    /*text-align: center;*/
     color: black;
     box-sizing: content-box;
-
+    padding-left: 10px;
 }
 /*headings*/
-#guess-quiz {
-    text-align: center;
-    font-size: 2.5rem;
+#guessquiz {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 1.5rem;
 }
 #logo {
     height: 100px;
     max-width: 100px;
-    padding-right: 5px;
+    /*padding-right: 5px;*/
     margin-top: 0px;
 }
 .choice {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 /*main*/
 
 .control{
     background-color: rgb(172, 172, 200);
-   /* background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;*/
+    /*background: url(../image/pexels-sebastian-411207.jpg)no-repeat top center;*/
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
@@ -44,19 +45,7 @@ body {
     margin: auto;
     padding: 50px 0;
 }
-#pic{
-        width: 120px;
-        height: 100px;
-        font-family: "Raleway", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 1.2px;
-        color: white;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        margin-left: auto;
-        padding-right: 40px;
-       
-}
+
 
 #image-container img {
     max-width: 100px;
@@ -76,24 +65,6 @@ body {
 
 }
 
-#countdown { /*width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    font-family: "Raleway", sans-serif;
-    text-justify: auto;
-    text-transform: lowercase;
-    letter-spacing: 1.2px;
-    color: rgb(40, 55, 156);
-    padding: 0;
-    margin-top: auto;
-    background-color: burlywood;*/
-
-    font-size: 24px;
-    color: #ff0000;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-}
 
 #button, #btn, #bttn, #btttn   {
     width: 80px;
@@ -126,7 +97,7 @@ body {
     color: burlywood;
 }
 
- .submit{
+.submit{
     margin-bottom: 10px;
     background-color: burlywood;
     border: 1px transparent;
@@ -140,17 +111,19 @@ body {
     background-color: darkblue;
     color: white;
 }
+.view-contents {list-style: none;
+}
 
-.score-tally {
+#score-tally {
     margin: 5px auto;
-    width: 60%;
+    width: fit-content;
     font-size: 1.2rem;
-    flex-direction: column-reverse;
+    /*flex-direction:row-reverse;*/
 }
 .scores {
-    display: block;
     padding: 25px;
     height: 10px;
+    justify-content: space-between;
     
 }
 
@@ -166,25 +139,35 @@ body {
     font-weight: bold;
     padding-left: 0;
 }  
-.rules{
-    text-align: center
+#rules{
+    text-align: center;
+   /* background:  rgb(214, 214, 247);*/
+
 }
     
     
-    .contact {
-        font-size: 70%;
-        margin-top: 70px;
-        margin-bottom: 0;
-        padding: 5%;
-        color: #3a3a3a;
-        box-sizing: border-box;
-        align-content: space-around;
-        background-color: rgb(172, 172, 200);
-        display: inline-block;
-        width: 100%;
-        
+.contact {
+    font-size: 70%;
+    margin-top: 70px;
+    margin-bottom: 0;
+    padding: 5%;
+    color: #3a3a3a;
+    box-sizing: border-box;
+    align-content: space-around;
+    background-color: rgb(172, 172, 200);
+    display: inline-block;
+    width: 100%;
+}
 
-    }
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+}
+
+#rules h3 {
+    cursor: pointer;
+    background-color: #4CAF50;
+}
     
 @media (max-width: 414px) {
     .controls-area {
@@ -219,9 +202,9 @@ body {
     }
    
 
-    .score-area {
+   /* .score-area {
         width: 100%;
-    }
+    }*/
 
     .scores {
         margin: 0.5em auto;

@@ -8,50 +8,48 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <title>GUESS-QUIZ</title>
 </head>
+
 <body>
     <div id="guessquiz">
         <img id="logo" src="asset/image/icons8-knight-100.png" alt="logo1">
         <h3 class="choice">Guess Quiz</h3>
-        <p>Choose The Right Answer</p>
+        <p>Type-in The Right Image</p>
+    </div>
+    <div id="rules">
+        <h3>Rules</h3>
+            <!--<hr>-->
+    <div class="dropdown">
+        <!--<botton>View rules</botton>-->
+        <div class="view-contents">
+            <ol>
+                <li>Click the Generator/reset (Gen/set) button</li>
+                <li>pick and type in the right image within 8seconds</li>
+                <li>Check the score</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div id="score-tally">
+        <p class="scores">Right Answer<br><span id="correct">0</span></P>
+        <P class="scores-i">Wrong Answer<br><span id="incorrect">0</span></P>
+        
     </div>
     <div class="control">
         <h4>Image Generator</h4>
-        <button id="button" onclick="handleClick()">Start/gen</button>
+        <button id="button" onclick="handleClick()">Start</button>
         <br><br>
         <div class="image-Container" id="imageContainer"></div>
-        <div id="countdown"> Next image in; 8 seconds</div>
+        <div id="countdown"> Next; 8 seconds</div>
         <div class="input-box">
             <input id="answer-box" type="text">
             <p id="input-answer">Enter Answer</p>
             <button id="btn" onclick="checkAnswer">Submit</button>
-            <button id="bttn" onclick="resetGame">Random/R</button>
+            <button id="bttn" onclick="resetGame">Gen/set</button>
             <button id="btttn" onclick="stopGame">Stop</button>
         </div>
 
     </div>
-    <div class="score-tally">
-        <p class="scores">Right Answer<br><span id="correct">0</span></P>
-        <hr>
-        <P class="scores">Wrong Answer<br><span id="incorrect">0</span></P>
-        <hr>
-    </div>
-    <div class="rules">
-        <h3>Rules</h3>
-        <hr>
-        <h4>Single</h4>
-        <ol>
-            <li>Click the start/gen button to start, click again to generate images</li>
-            <li>Guess the right image</li>
-            <li>Check the score</li>
-        </ol>
-        <h4> Rapid</h4>
-        <ol>
-            <li>Click the random/reset button</li>
-            <li>pick and type in the right image within 8seconds</li>
-            <li>Check the score</li>
-        </ol>
-
-    </div>
+ 
     <footer>
         <div class="contact">
             <h3>Contact us:</h3>
@@ -59,12 +57,6 @@
             <p>Duvbergsvagen 2, Varbygard Stockholm Sweden</p>
         </div>
     </footer>
-
-
-
-
-
-
 
     <!-- font awesome script  -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

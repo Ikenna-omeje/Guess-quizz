@@ -1,16 +1,17 @@
+let countdownDisplay;
 // Wait for the DOM to fully load before adding event listeners
 document.addEventListener('DOMContentLoaded', () => {
     const imageElement = document.getElementById('button');
     const submitBtn = document.getElementById('btn');
     const resetBttn = document.getElementById('bttn');
     const answerBox = document.getElementById('answer-box');
-    const countdownDisplay = document.getElementById('countdown');
-   // const stopGame = document.getElementById("stopGame")
+    countdownDisplay = document.getElementById('countdown');//assign globally
+    const stopBttn = document.getElementById('btttn')// added for stop button
 
     imageElement.addEventListener('click', handleClick);
     submitBtn.addEventListener('click', checkAnswer);
     resetBttn.addEventListener('click', resetGame);
-    //stopBttn.addEventListener("click", stopGame);
+    stopBttn.addEventListener('click', stopGame);
 
     answerBox.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
@@ -25,7 +26,7 @@ const maxImages = 8;
 let randomIndex = 0;
 let imageInterval;
 let countdownTimer;
-const countdownTime = 8 //Time between images 
+const countdownTime = 8; //Time between images per/sec
 
 // Function to handle the image click event
     // Array of image paths
@@ -46,6 +47,28 @@ const imagePaths = [
     { image: "asset/image/icons8-knight-94.png", answer: "Knight" },
 ];
 
+const imagePaths2  = [
+    { image: "asset/image/Buffalo.jpg", answer: "Buffalo" },
+    { image: "asset/image/Meerkats.jpg", answer: "Meerkats" },
+    { image: "asset/image/pexels-Chameleon.jpg", answer: "Chameleon" },
+    { image: "asset/image/pexels-Deer.jpg", answer: "Deer" },
+    { image: "asset/image/pexels-Dogs.jpg", answer: "Dog" },
+    { image: "asset/image/pexels-Eagle-53581.jpg", answer: "Eagle" },
+    { image: "asset/image/pexels-Flamingos-39627.jpg", answer: "Flamingos" },
+    { image: "asset/image/pexels-Hedgehogs.jpg", answer: "hedgehogs" },
+    { image: "asset/image/pexels-hummingbird.jpg", answer: "Hummingbird" },
+    { image: "asset/image/pexels-Lama-3396657.jpg", answer: "Lama" },
+    { image: "asset/image/pexels-Lemurs-133459.jpg", answer: "Lemurs" },
+    { image: "asset/image/pexels-monkey.jpg", answer: "Monkey" },
+    { image: "asset/image/pexels-peacock.jpg", answer: "Peacock" },
+    { image: "asset/image/pexels-Penquin.jpg", answer: "Penguin" },
+    { image: "asset/image/pexels-Polar-Bear-65320.jpg", answer: "polar-Bear" },
+    { image: "asset/image/pexels-Zebra-247376.jpg", answer: "Zebra" },
+    { image: "asset/image/squirrel.jpg", answer: "Squirrel" },
+    { image: "asset/image/Tiger.jpg", answer: "Tigar" },
+];
+
+
 // initialize and array to keep track of used image
 let usedImagePath = [];
 //function to generate a random index
@@ -54,23 +77,22 @@ function getRandomIndex(max) {
     //loop untill we find an index that has never been used
     do {
         index = Math.floor(Math.random() * max);
+        if (usedImagePath.length >= max) {// reset all images used
+
+            usedImagePath = [];
+        }
 } while (usedImagePath.includes(index));
 
 //add the new index to the used image list
+    usedImagePath.push(index);
 
-usedImagePath.push(index);
-
-return index;
+    return index;
 }
 
-//function to startgame
+//Function to handle the image click event
 
 function handleClick() {
     if (imageCount >= maxImages) {
-        //document.getElementById('correct').innerText = '0';
-        //document.getElementById('incorrect').innerText = '0';
-
-         //resetGame(); //authomatically reset game
          stopGame();
         return;
     }
@@ -93,15 +115,11 @@ function handleClick() {
     imageCount++;
     startCountdown(); //start coundown for next image
 
-   /* if (imageCount >= maxImages) {
-        alert('You have reached the maximum number of images.');
-        clearInterval(imageInterval);
-        handleClick(); 
-    }*/
+   
 }
 //function to check answer
 function checkAnswer() {
-    const answer = document.getElementById('answer-box').value;
+    const answer = document.getElementById('answer-box').value.trim();
     const choosenImage = imagePaths[randomIndex];
 
     if (choosenImage.answer.toLowerCase() === answer.toLowerCase()) {
@@ -118,6 +136,7 @@ function checkAnswer() {
     //return;
 }
 
+//Function to reset game
 function resetGame() {
     document.getElementById('correct').innerText = '0';
     document.getElementById('incorrect').innerText = '0';
@@ -126,12 +145,17 @@ function resetGame() {
 
     //clear the used image array when the game is reset
     usedImagePath = [];
+    clearInterval(imageInterval);//clear existing image on the interval
+    clearInterval(countdownTimer);//clear existing count down timer
+    countdownDisplay.innerText = '';//clear countdown display
     //handleClick();
-    startGame();
+    startGame();// start new game
 }
-
+//Function to start game
 function startGame(){
-    clearInterval(imageInterval);
+    clearInterval(imageInterval);// clear existing image on the internal
+
+    clearInterval(countdownTimer) //clear existing count down timer
     imageInterval = setInterval(() => {
     handleClick();
 
@@ -146,50 +170,50 @@ clearInterval(imageInterval); // Stop the interval for image changes
 
 clearInterval(countdownTimer); // Stop the countdown timer
 
-document.getElementById('countdown').innerText = "Game Over"; // Show game over
+countdownDisplay.innerText = "Game Over"; // Show game over
 
-alert('You have reached the maximum number of images. The game is over.');
+alert('Game over!');
 
 }
 
+function toggleRules() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }s
+}
+
+//function to start the countdown
 function startCountdown() {
 
 let timeLeft = countdownTime;
-
 countdownDisplay.innerText = `Next image in: ${timeLeft} seconds`;
 
 clearInterval(countdownTimer); // Clear any existing countdown
 
 countdownTimer = setInterval(() => {
-
     timeLeft--;
+    countdownDisplay.innerText = `Next image in: ${timeLeft} seconds`
 
-    countdownDisplay.innerText = `Next image in: ${timeLeft} seconds`;
-
-    if (timeLeft <= 0) {
-
+    if (timeLeft <= 0) { 
         clearInterval(countdownTimer);
+        if (imageCount < maxImages){
 
-    }
-
-}, 1000);
-
+        }handleClick();
+        //clearInterval(countdownTimer)//automatically move to the next image
+       } 
+    }, 1000);
 }
-
-    /*imageInterval = setInterval(() => {
-        if (imageCount < maxImages) {
-            handleClick();
-        } else {
-            clearInterval(imageInterval);
-        }
-    }, 8000); // Display a new image every 8 seconds
-}*/
-
+    
+//function to increase the right answer call
 function incrementRightAnswer() {
     let preScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++preScore;
 }
 
+//function to increase the wrong answer call
 function incrementWrongAnswer() {
     let preScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++preScore;
